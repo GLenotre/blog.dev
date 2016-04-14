@@ -1,6 +1,6 @@
 <?php
 
-class PostsController extends \BaseController {
+class PostsController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -37,23 +37,8 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-	    $validator = Validator::make(Input::all(), Post::$rules);
-			// attempt validation
-		    if ($validator->fails()) {
-		    	return Redirect::back()->withInput()->withErrors($validator);
-
-		        // validation failed, redirect to the post create page with validation errors and old inputs
-		    } else {
-		        // validation succeeded, create and save the post
-		       $post = new Post();
-
-				$post->title = Input::get('title');
-				$post->body = Input::get('body');
-				$post->save(); // Post model extends methods from Eloquent, which has save() implementation
-				// return an entry from the db of that page with the id
-			
-			return Redirect::action('PostsController@index');
-		    }
+       $post = new Post();
+       return $this->validateAndSave($post);
 
 	}
 
@@ -95,17 +80,9 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		// create Validator
-
-		//attempt Validator
-
-
-		$post = Post::find(1);
-		$post->title = Input::get('title');
-		$post->body = Input::get('body');
-		$post->save();
-		return $post;
-	}
+		$post = Post::find($id);
+ 		return $this->validateAndSave($post);
+ 	}
 
 
 	/**
@@ -116,8 +93,32 @@ class PostsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		return 'destroy id';
+		$post = Post::find($id);
+
+		if($post) {
+			$post->delete();
+		}
+		
+		return Redirect::action('PostsController@index');
 	}
 
-
+	public function validateAndSave($post)
+	{
+		//Validator::??
+		$validator = Validate::make(Input::all(), Post::$rules);
+		// attempt validation
+	
+	    if ($validator->fails()) {
+	    	return Redirect::back()->withInput()->withErrors($validator);
+	        // validation failed, redirect to the post create page with validation errors and old inputs
+	    }
+	        // validation succeeded, create and save the post
+       
+		$post->title = Input::get('title');
+		$post->body = Input::get('body');
+		$post->save(); // Post model extends methods from Eloquent, which has save() implementation
+		// return an entry from the db of that page with the id
+			
+		return Redirect::action('PostsController@index');
+	}
 }
