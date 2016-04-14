@@ -9,7 +9,13 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('posts.index');
+
+		    $posts = Post::paginate(2);
+		    return View::make('posts.index')->with(array('posts' => $posts));
+
+		// return View::make('posts.index', [
+		// 	'posts' => Post::paginate(4)		
+		// 	]);
 	}
 
 
@@ -31,7 +37,24 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-		return Redirect::back()->withInput();
+	    $validator = Validator::make(Input::all(), Post::$rules);
+			// attempt validation
+		    if ($validator->fails()) {
+		    	return Redirect::back()->withInput()->withErrors($validator);
+
+		        // validation failed, redirect to the post create page with validation errors and old inputs
+		    } else {
+		        // validation succeeded, create and save the post
+		       $post = new Post();
+
+				$post->title = Input::get('title');
+				$post->body = Input::get('body');
+				$post->save(); // Post model extends methods from Eloquent, which has save() implementation
+				// return an entry from the db of that page with the id
+			
+			return Redirect::action('PostsController@index');
+		    }
+
 	}
 
 
@@ -43,7 +66,10 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return 'show id';
+		$post = Post::find($id);
+
+		// return an entry from the db of that page with the id
+		return View::make('posts.show')->with('post', $post); 
 	}
 
 
@@ -55,7 +81,9 @@ class PostsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return 'edit id';
+		$post = Post::find($id);
+		return View::make('posts.edit')->with(['post' => $post]);
+
 	}
 
 
@@ -67,7 +95,16 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		return 'update id';
+		// create Validator
+
+		//attempt Validator
+
+
+		$post = Post::find(1);
+		$post->title = Input::get('title');
+		$post->body = Input::get('body');
+		$post->save();
+		return $post;
 	}
 
 
