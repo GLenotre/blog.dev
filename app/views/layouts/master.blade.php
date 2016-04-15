@@ -6,11 +6,22 @@
 </head>
 
 <body>
+	@if (Session::has('successMessage'))
+    <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
+	@endif
+	
+	@if (Session::has('errorMessage'))
+	    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+	@endif
+
     @yield('content')
 
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    
+
+{{--     setTimeout(function() {
+    ."alert".slideup
+    } --}}
     @yield('bottom-script')
 
 </body>

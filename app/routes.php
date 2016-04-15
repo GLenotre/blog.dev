@@ -59,3 +59,12 @@ Route::get('/sayhello/{name?}', function($name = 'Codeup')
 });
 
 Route::get('roll-dice/{dice?}', 'HomeController@rolldice');
+
+Route::get('my-posts', function() {
+	$user = User::first();
+
+	foreach($user->posts as $post) {
+		echo "Title is: $post->title" . "<br>";
+		echo "Body is: $post->body" . "<br>";
+	}
+});

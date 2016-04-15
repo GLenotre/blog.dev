@@ -1,14 +1,7 @@
 @extends('layouts.master')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	@yield('top-script')
-</head>
-
 
 @section('content')
-{{-- <form method="post" action="{{{ action('PostsController@store') }}}"> --}}
+
 
 	{{ Form::open(array('action' => 'PostsController@store')) }}
 
@@ -24,6 +17,7 @@
 	{{-- <input type="submit"> --}}
 	{{ Form::submit('Click Me!') }}
 	{{ Form::close() }}
+
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
