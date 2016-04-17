@@ -7,10 +7,15 @@ class PostsController extends BaseController {
 	 *
 	 * @return Response
 	 */
+	public function __construction()
+	{
+		$this->beforFilter('auth', array('except' => array('index', 'show')));
+	}
+
 	public function index()
 	{
 
-		    $posts = Post::paginate(5);
+		    $posts = Post::with('user')->paginate(5);
 		    return View::make('posts.index')->with(array('posts' => $posts));
 
 		// return View::make('posts.index', [
