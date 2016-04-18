@@ -9,7 +9,7 @@ class PostsController extends BaseController {
 	 */
 	public function __construction()
 	{
-		$this->beforFilter('auth', array('except' => array('index', 'show')));
+		$this->beforeFilter('auth', array('except' => array('index', 'show')));
 	}
 
 	public function index()
@@ -130,8 +130,8 @@ class PostsController extends BaseController {
        
 		$post->title = Input::get('title');
 		$post->body = Input::get('body');
-		// $post-user_id = Auth::id();
-		$post->user_id = User::first()->id;
+		$post->user_id = Auth::id();
+		// $post->user_id = User::first()->id;
 		$post->save(); // Post model extends methods from Eloquent, which has save() implementation
 		// return an entry from the db of that page with the id
 		
@@ -139,7 +139,7 @@ class PostsController extends BaseController {
 		return Redirect::action('PostsController@index');
 	}
 	
-	public function postNotFound ($post) 
+	public function postNotFound ($id) 
 		{
 			$post = Post::find($id);
 			if (is_null($post)) 

@@ -3,9 +3,14 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	@yield('top-script')
+	
 </head>
 
 <body>
+	@include('partials.navbar')
+	@include('partials.header')
+
+
 	@if (Session::has('successMessage'))
     <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
 	@endif
@@ -23,5 +28,6 @@
     ."alert".slideup
     } --}}
     @yield('bottom-script')
+    @extends('partials.footer')
 
 </body>

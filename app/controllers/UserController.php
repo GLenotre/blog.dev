@@ -26,4 +26,18 @@ class UserController extends BaseController {
         return Redirect::action('PostsController@index');
     }
 
+ //    public function postContact()
+ //    {
+ //        $from = Input::get('from');
+ //        $email = Input::get('email');
+ //        $subject = Input::get('subject');
+ //        $body = Input::get('body');
+
+ //        $data = [
+ //            'from' => $from,
+ //            'email' => $email,
+ //            'subject' => $subject,
+ //            'body' => $body
+ //        ];
+	// }
 }
