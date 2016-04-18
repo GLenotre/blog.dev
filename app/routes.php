@@ -71,5 +71,8 @@ Route::get('my-posts', function() {
 	foreach($user->posts as $post) {
 		echo "Title is: $post->title" . "<br>";
 		echo "Body is: $post->body" . "<br>";
-	}
+		}
 });
+
+Route::get('/query', 'PostsController@search');
+

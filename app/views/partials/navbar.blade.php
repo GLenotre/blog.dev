@@ -27,15 +27,11 @@
         <?php } else { ?>
           <li><a href="{{{ action('UserController@showLogin') }}}">Login</a></li>
           <?php } ?>
-          
-
-          <form class="navbar-form navbar-right" role="search">
-
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
         
-      </form>
+        {{ Form::open(['method'=>'GET', 'action'=>'PostsController@index', 'class'=>'navbar-form navbar-right','role'=>'search'])  }}
+              <input type="text" name="search" class="form-control" placeholder="Search">
+        {{ Form::close() }}
+
       </ul>
     </div> <!-- /.navbar-collapse  -->
   </div> <!--  /.container-fluid  -->

@@ -20,5 +20,10 @@ public function user()
 {
 	return $this->belongsTo('User');
 }
+
+public static function getAllLike($search)
+{
+	return self::where('title', 'LIKE', "%$search%")->orWhere('body', 'LIKE', "%$search%")->get();
+}
 }
 

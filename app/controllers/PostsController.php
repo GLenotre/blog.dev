@@ -15,12 +15,21 @@ class PostsController extends BaseController {
 	public function index()
 	{
 
-		    $posts = Post::with('user')->paginate(5);
-		    return View::make('posts.index')->with(array('posts' => $posts));
+		    // $posts = Post::with('user')->paginate(5);
+		    // return View::make('posts.index')->with(array('posts' => $posts));
 
-		// return View::make('posts.index', [
-		// 	'posts' => Post::paginate(4)		
-		// 	]);
+		 	$search = Input::get('search');
+
+		 	if (is_null($search))
+		 	{
+		 		$posts = Post::with('User')->orderBy('created_at','desc')->paginate(4);
+		 	}
+		 	else
+		 	{
+		 		$posts = Post::with('User')->where('title', 'LIKE', "%$search%")->orWhere('body', 'LIKE', "%$search%")->orderBy('created_at', 'desc')->paginate(4);
+		 	}
+
+		 	return View::make('posts.index')->with('posts', $posts);
 	}
 
 
@@ -148,4 +157,14 @@ class PostsController extends BaseController {
 			}
 			return $post;
 		}
+
+		public function search()
+  	  	{
+        $search = Input::get('search');
+        $posts = Post::getAllLike($search);
+        // $posts = Post::where('title', '=', 'Hello World')->get(); 
+        foreach ($posts as $post) {
+			echo $post->title . "<br>";
+        	}
+        }
 }
