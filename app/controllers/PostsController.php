@@ -7,7 +7,7 @@ class PostsController extends BaseController {
 	 *
 	 * @return Response
 	 */
-	public function __construction()
+	public function __construct()
 	{
 		$this->beforeFilter('auth', array('except' => array('index', 'show')));
 	}

@@ -21,6 +21,8 @@
 Route::get('/login', 'UserController@showLogin');
 Route::post('/login', 'UserController@postLogin');
 
+Route::get('/logout', 'UserController@getLogout');
+
 Route::get('/', 'HomeController@showWelcome');
 
 Route::get('/portfolio', 'HomeController@showPortfolio');
