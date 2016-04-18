@@ -2,9 +2,9 @@
 
 class UserController extends BaseController {
 	
-	public function showLogin
+	public function showLogin()
 	{
-		return View::make('login');	
+		return View::make('users.login');	
 	}
 
     public function postLogin()

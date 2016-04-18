@@ -144,7 +144,7 @@ class PostsController extends BaseController {
 			$post = Post::find($id);
 			if (is_null($post)) 
 			{
-				App:abort(404);
+				App::abort(404);
 			}
 			return $post;
 		}
