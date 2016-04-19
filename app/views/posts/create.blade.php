@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+<h1>Create</h1>
+@stop
+
 @section('content')
 
 
@@ -13,6 +17,10 @@
 	{{ Form::label('body', 'Body') }}
 	{{ Form::text('body', null, ['placeholder'=>'Body']) }}
 	{{ $errors->first('body', '<span class="help-block">:message</span>') }}
+
+	{{ Form::label('image', 'Image') }}
+	
+	{{ $errors->first('image', '<span class="help-block">:message</span>') }}	
 
 	{{-- <input type="submit"> --}}
 	{{ Form::submit('Click Me!') }}

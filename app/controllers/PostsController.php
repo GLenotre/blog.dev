@@ -19,6 +19,8 @@ class PostsController extends BaseController {
 		    // return View::make('posts.index')->with(array('posts' => $posts));
 
 		 	$search = Input::get('search');
+		 	$file = Input::file('photo');
+
 
 		 	if (is_null($search))
 		 	{
@@ -139,6 +141,7 @@ class PostsController extends BaseController {
        
 		$post->title = Input::get('title');
 		$post->body = Input::get('body');
+		// $post->image = Input::get('photo');
 		$post->user_id = Auth::id();
 		// $post->user_id = User::first()->id;
 		$post->save(); // Post model extends methods from Eloquent, which has save() implementation

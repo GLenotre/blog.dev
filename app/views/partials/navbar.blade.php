@@ -16,8 +16,8 @@
       <ul class="nav navbar-nav">
         {{-- <li class="active"><a href="about.php">About <span class="sr-only">(current)</span></a></li> --}}
   
-      <li><a href="resume">Resume</a></li>
-      <li><a href="portfolio">Portfolio</a></li>
+      <li><a href="/resume">Resume</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
      
       <ul class="nav navbar-nav navbar-right">
       
@@ -29,7 +29,7 @@
           <?php } ?>
         
         {{ Form::open(['method'=>'GET', 'action'=>'PostsController@index', 'class'=>'navbar-form navbar-right','role'=>'search'])  }}
-              <input type="text" name="search" class="form-control" placeholder="Search">
+              <input type="text" name="search" class="form-control" placeholder="Search titles">
         {{ Form::close() }}
 
       </ul>

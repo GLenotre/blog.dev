@@ -1,8 +1,11 @@
 @extends('layouts.master')
 
+@section('title')
+<h1>Main</h1>
+@stop
+
     @section('content')
 
-    <h1>All posts</h1>
     @foreach($posts as $post)
         <h2><a href="{{{ action('PostsController@show', $post->id)}}}">{{{$post->title}}}</a></h2>
         <h4>{{{$post->body}}}</h4>

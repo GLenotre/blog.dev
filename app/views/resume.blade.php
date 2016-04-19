@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
-@section('top-script')
-	<title>GLenotre Resume</title>
+@section('title')
+<h1>Resume</h1>
 @stop
 
 @section('content')

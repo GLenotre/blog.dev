@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
-@section('top-script')
-
+@section('title')
+<h1>Edit</h1>
 @stop
 
 @section('content')
