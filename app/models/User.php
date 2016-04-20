@@ -9,6 +9,9 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
+	const ADMIN = 1;
+	const STANDARD = 2;
+
 	/**
 	 * The database table used by the model.
 	 *
@@ -34,5 +37,10 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	public function setPasswordAttribute($value)
 	{
 	    $this->attributes['password'] = Hash::make($value);
+	}
+
+	public function isStandard()
+	{
+		return $this->role_id == User::STANDARD;
 	}
 }

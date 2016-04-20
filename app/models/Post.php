@@ -5,10 +5,11 @@ class Post extends BaseModel
 {
 	protected $table = 'posts';
 
-	public static $rules = array(
+	public static $rules = [
     'title'      => 'required|max:100',
-    'body'       => 'required|max:10000'
-);
+    'body'       => 'required|max:10000',
+    'image'		 => 'max:30000|mimes:jpeg,png,gif'
+];
 
 public function getCreatedAtAttribute($value)
 {
@@ -24,6 +25,11 @@ public function user()
 public static function getAllLike($search)
 {
 	return self::where('title', 'LIKE', "%$search%")->orWhere('body', 'LIKE', "%$search%")->get();
+}
+
+public function isAuthor(user $user)
+{
+	return $this->user_id != $user->id;
 }
 }
 

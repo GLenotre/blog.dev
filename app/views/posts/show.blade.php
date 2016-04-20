@@ -9,5 +9,9 @@
     <p>Created at: {{{$post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A')}}}</p>
     
     <h3>Here's the body: {{{$post->body}}}</h2> 
+
+    @if($post->image)
+    	<img src="{{{$post->image}}}">
+    @endif 
 	
 @stop

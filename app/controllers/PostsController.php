@@ -10,6 +10,7 @@ class PostsController extends BaseController {
 	public function __construct()
 	{
 		$this->beforeFilter('auth', array('except' => array('index', 'show')));
+		$this->beforeFilter('edit', ['only' => ['edit']]);
 	}
 
 	public function index()
@@ -89,9 +90,7 @@ class PostsController extends BaseController {
 		$post = Post::find($id);
 		// dd($post);
 		return View::make('posts.edit')->with(['post' => $post]);
-
 	}
-
 
 	/**
 	 * Update the specified resource in storage.
@@ -139,9 +138,21 @@ class PostsController extends BaseController {
 	    }
 	        // validation succeeded, create and save the post
        
+
+       	if(Input::hasFile('image')) {
+       		$image = Input::file('image');
+
+       		$image->move(
+       			public_path('/images'),
+       			$image->getClientOriginalName()
+       			);
+
+       		$post->image = "/images/{$image_getClientOriginalName()}";
+       	}
+       	
+
 		$post->title = Input::get('title');
 		$post->body = Input::get('body');
-		// $post->image = Input::get('photo');
 		$post->user_id = Auth::id();
 		// $post->user_id = User::first()->id;
 		$post->save(); // Post model extends methods from Eloquent, which has save() implementation

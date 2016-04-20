@@ -11,6 +11,17 @@ class UserTableSeeder extends Seeder
 		$user->last_name = $_ENV ['USER_LAST'];
 		$user->email = $_ENV ['USER_EMAIL'];
 		$user->password = $_ENV ['USER_PASS'];
+		$user->role_id = User::ADMIN,
 		$user->save();
 	}
+
+		$user = new User();
+		$user->first_name = 'John';
+		$user->last_name = 'French';
+		$user->email = $_ENV ['USER_EMAIL'];
+		$user->password = $_ENV ['USER_PASS'];
+		$user->role_id = User::STANDARD,
+		$user->save();
+	}
+
 }
