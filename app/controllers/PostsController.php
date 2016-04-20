@@ -87,7 +87,7 @@ class PostsController extends BaseController {
 	{
 		$post = $this->postNotFound($id);
 
-		$post = Post::find($id);
+		
 		// dd($post);
 		return View::make('posts.edit')->with(['post' => $post]);
 	}
@@ -101,7 +101,7 @@ class PostsController extends BaseController {
 	public function update($id)
 	{
 		$post = $this->postNotFound($id);
-		$post = Post::find($id);
+		
  		return $this->validateAndSave($post);
  	}
 
@@ -133,11 +133,12 @@ class PostsController extends BaseController {
 		// attempt validation
 	
 	    if ($validator->fails()) {
+	    	dd($validator->errors());
+
 	    	return Redirect::back()->withInput()->withErrors($validator);
 	        // validation failed, redirect to the post create page with validation errors and old inputs
 	    }
 	        // validation succeeded, create and save the post
-       
 
        	if(Input::hasFile('image')) {
        		$image = Input::file('image');
@@ -146,8 +147,7 @@ class PostsController extends BaseController {
        			public_path('/images'),
        			$image->getClientOriginalName()
        			);
-
-       		$post->image = "/images/{$image_getClientOriginalName()}";
+       		$post->image = "/images/{$image->getClientOriginalName()}";
        	}
        	
 

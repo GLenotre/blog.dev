@@ -7,15 +7,15 @@
 @section('content')
 
 
-	{{ Form::open(array('action' => 'PostsController@store', 'files' => true]) }}
+	{{ Form::open(array('action' => 'PostsController@store', 'files' => true)) }}
 
 
 	{{ Form::label('title', 'Title') }}
 	{{ Form::text('title', null, ['placeholder'=>'Title']) }}
 	{{ $errors->first('title', '<span class="help-block">:message</span>') }}
-
+	<br>
 	{{ Form::label('body', 'Body') }}
-	{{ Form::text('body', null, ['placeholder'=>'Body']) }}
+	{{ Form::textarea('body', null, ['placeholder'=>'Body']) }}
 	{{ $errors->first('body', '<span class="help-block">:message</span>') }}
 
 	<div class="form-group">
@@ -24,7 +24,7 @@
 	</div>
 	@if ($errors->has('image'))
 	<p> {{ $errors->first('image', '<span class="help-block">:message</span>') }}
-
+	@endif
 
 	{{-- <input type="submit"> --}}
 	{{ Form::submit('Click Me!') }}
