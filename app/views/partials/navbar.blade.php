@@ -8,20 +8,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Gaston's Blog</a>
+      <a class="navbar-brand" href="/posts">GL Blog</a>
     </div>
 
     <!--  Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="`navbar-collapse-1">
-      <ul class="nav navbar-nav">
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
         {{-- <li class="active"><a href="about.php">About <span class="sr-only">(current)</span></a></li> --}}
-  
+      
       <li><a href="/resume">Resume</a></li>
       <li><a href="/portfolio">Portfolio</a></li>
-     
+      </ul>
       <ul class="nav navbar-nav navbar-right">
       
         <?php if (Auth::check()) { ?>
+          <li><a href="{{{ action('PostsController@create') }}}">Create</a></li>
           <li><a href="{{{ action('PostsController@create') }}}">Create</a></li>
           <li><a href="{{{ action('UserController@getLogout') }}}">Logout</a></li>
         <?php } else { ?>

@@ -8,7 +8,7 @@ class Post extends BaseModel
 	public static $rules = [
     'title'      => 'required|max:100',
     'body'       => 'required|max:10000',
-    'image'		 => 'max:30000|mimes:jpeg,png,gif'
+    'image'		 => 'max:30000|mimes:jpeg,png,gif,jpg'
 ];
 
 public function getCreatedAtAttribute($value)

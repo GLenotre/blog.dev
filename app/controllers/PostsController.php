@@ -70,7 +70,6 @@ class PostsController extends BaseController {
 	public function show($id)
 	{
 		$post = $this->postNotFound($id);
-		$post = Post::find($id);
 
 		// return an entry from the db of that page with the id
 		return View::make('posts.show')->with('post', $post); 
@@ -115,12 +114,6 @@ class PostsController extends BaseController {
 	public function destroy($id)
 	{
 		$post = $this->postNotFound($id);
-		$post = Post::find($id);
-
-		if(!$post) {
-			Session::flash('errorMessage', "Page was not found");
-			return Redirect::action('PostsController@index');		
-		}
 		
 		$post->delete();
 		Session::flash('successMessage', "The post was successfully deleted"); 
@@ -133,7 +126,6 @@ class PostsController extends BaseController {
 		// attempt validation
 	
 	    if ($validator->fails()) {
-	    	dd($validator->errors());
 
 	    	return Redirect::back()->withInput()->withErrors($validator);
 	        // validation failed, redirect to the post create page with validation errors and old inputs

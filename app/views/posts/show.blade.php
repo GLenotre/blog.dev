@@ -6,7 +6,7 @@
 
 @section('content')
     <h1>{{{$post->title}}}</h1>
-    <p>Created at: {{{$post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A')}}}</p>
+    <p>Created on {{{$post->created_at->setTimezone('America/Chicago')->format(' m/j/y ')}}}</p>
     
     <h3>{{{$post->body}}}</h3> 
 
@@ -14,8 +14,9 @@
     	<img src="{{{$post->image}}}">
     @endif 
 	
+	<br>
     @if(Auth::check()) 
-      <a href="{{{action("PostsController@edit", $post->id)}}}">Edit</a></li>
+      <a href="{{{action("PostsController@edit", $post->id)}}}">Edit post</a></li>
    	@endif
 
 @stop

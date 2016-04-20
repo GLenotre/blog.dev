@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-	{{ Form::model($post, array('action' => array('PostsController@update', $post->id), 'method' => 'PUT', )) }}
+	{{ Form::model($post, array('action' => array('PostsController@update', $post->id), 'method' => 'PUT', 'files' => true)) }}
 
 	{{ Form::label('title', 'Title') }}
 	{{ Form::text('title', $post->title, ['placeholder'=>'Title']) }}
