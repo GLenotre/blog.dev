@@ -22,7 +22,7 @@
       <ul class="nav navbar-nav navbar-right">
       
         <?php if (Auth::check()) { ?>
-          <li><a href="{{{ action('PostsController@create') }}}">Create</a></li>
+          <li><a href="{{{ action('UserController@show', Auth::id()) }}}">User</a></li>
           <li><a href="{{{ action('PostsController@create') }}}">Create</a></li>
           <li><a href="{{{ action('UserController@getLogout') }}}">Logout</a></li>
         <?php } else { ?>

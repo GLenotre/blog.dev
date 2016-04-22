@@ -74,5 +74,8 @@ Route::get('my-posts', function() {
 		}
 });
 
+Route::get('/user/{id}', 'UserController@show');
+
+
 Route::get('/query', 'PostsController@search');
 

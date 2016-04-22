@@ -4,6 +4,20 @@
 <h1>Create</h1>
 @stop
 
+@section('top-script')
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+@stop
+
+@section('bottom-script')
+	<script src="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+	<script>
+		var simplemde = new SimpleMDE({
+			element: document.getElementById("body")
+		});
+	</script>
+@stop 
+
 @section('content')
 
 
@@ -15,7 +29,7 @@
 	{{ $errors->first('title', '<span class="help-block">:message</span>') }}
 	<br>
 	{{ Form::label('body', 'Body') }}
-	{{ Form::textarea('body', null, ['placeholder'=>'Body']) }}
+	{{ Form::textarea('body', null, ['placeholder'=>'Body', 'class'=>'hide', 'id' => 'body']) }}
 	{{ $errors->first('body', '<span class="help-block">:message</span>') }}
 
 	<div class="form-group">
@@ -27,7 +41,7 @@
 	@endif
 
 	{{-- <input type="submit"> --}}
-	{{ Form::submit('Click Me!') }}
+	{{ Form::submit('Submit', ['class' => 'btn btn-primary']) }}
 	{{ Form::close() }}
 
 

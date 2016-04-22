@@ -10,6 +10,12 @@ class Post extends BaseModel
     'body'       => 'required|max:10000',
     'image'		 => 'max:30000|mimes:jpeg,png,gif,jpg'
 ];
+public function getBodyAttribute($body)
+{
+	$Parsedown = new Parsedown();
+
+	return $Parsedown->text($body); 
+} 
 
 public function getCreatedAtAttribute($value)
 {
