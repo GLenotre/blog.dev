@@ -23,7 +23,7 @@ Route::post('/login', 'UserController@postLogin');
 
 Route::get('/logout', 'UserController@getLogout');
 
-Route::get('/', 'HomeController@showWelcome');
+Route::get('/', 'PostsController');
 
 Route::get('/portfolio', 'HomeController@showPortfolio');
 
