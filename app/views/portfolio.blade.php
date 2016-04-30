@@ -5,7 +5,7 @@
 @stop
 
 @section('top-script')
-	<title>GLenotre Portfolio</title>
+	<title>Gaston Portfolio</title>
 
 @section('content')
 	
