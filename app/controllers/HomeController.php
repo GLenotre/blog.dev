@@ -14,6 +14,11 @@ class HomeController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
+	public function index()
+	{
+		return View::make('landing');	
+	}
+
 	public function showWhackamole()
 	{
 		return View::make('whackamole');
@@ -34,14 +39,14 @@ class HomeController extends BaseController {
 		return View::make('resume');
 	}
 
-	public function rolldice($dice = 'Let\'s roll!')
-	{
-		$random = mt_rand(1, 6);
-		$data = [
-				'dice' => $dice,
-				 'random' => $random
-				];
+	// public function rolldice($dice = 'Let\'s roll!')
+	// {
+	// 	$random = mt_rand(1, 6);
+	// 	$data = [
+	// 			'dice' => $dice,
+	// 			 'random' => $random
+	// 			];
 		
-		return View::make('roll-dice')->with($data);
-	}
+	// 	return View::make('roll-dice')->with($data);
+	// }
 }
