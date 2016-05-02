@@ -23,7 +23,9 @@ Route::post('/login', 'UserController@postLogin');
 
 Route::get('/logout', 'UserController@getLogout');
 
-Route::get('/', 'PostsController@index');
+Route::get('/', 'HomeController@index');
+
+Route::get('/blog', 'PostsController@index');
 
 Route::get('/portfolio', 'HomeController@showPortfolio');
 
@@ -33,19 +35,14 @@ Route::resource('posts', 'PostsController'); // CRUD
 
 Route::get('/whackamole', 'HomeController@showWhackamole');
 
-Route::get('/sayhello',function()
-{
-		return "Howdy, Codeup";
-});
-
-Route::get('/sayhello/{name}',function($name)
-{
-		if($name == 'George') {
-			return Redirect::to('/');
-		} else {
-			return "Hello, $name!";
-		}
-});
+// Route::get('/sayhello/{name}',function($name)
+// {
+// 		if($name == 'George') {
+// 			return Redirect::to('/');
+// 		} else {
+// 			return "Hello, $name!";
+// 		}
+// });
 
 Route::get('/resume',function()
 {
@@ -57,24 +54,22 @@ Route::get('/portfolio',function()
 		return View::make('portfolio');
 });
 
-Route::get('/sayhello/{name?}', function($name = 'Codeup')
-{
-    $data = ['name' => $name];   // the key and value should be the same, echo the key $name
-    return View::make('my-first-view')->with($data);
-});
+// Route::get('/sayhello/{name?}', function($name = 'Codeup')
+// {
+//     $data = ['name' => $name];   // the key and value should be the same, echo the key $name
+//     return View::make('my-first-view')->with($data);
+// });
 
-Route::get('roll-dice/{dice?}', 'HomeController@rolldice');
+// Route::get('my-posts', function() {
+// 	$user = User::first();
 
-Route::get('my-posts', function() {
-	$user = User::first();
+// 	foreach($user->posts as $post) {
+// 		echo "Title is: $post->title" . "<br>";
+// 		echo "Body is: $post->body" . "<br>";
+// 		}
+// });
 
-	foreach($user->posts as $post) {
-		echo "Title is: $post->title" . "<br>";
-		echo "Body is: $post->body" . "<br>";
-		}
-});
-
-Route::get('/user/{id}', 'UserController@show');
+// Route::get('/user/{id}', 'UserController@show');
 
 
 Route::get('/query', 'PostsController@search');

@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
 	{{-- favicon icon --}}
 		<link rel="apple-touch-icon" sizes="57x57" href="/img/Gaston_navy-blue_circle.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="/img/Gaston_navy-blue_circle.png">
@@ -49,6 +55,12 @@
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+<!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.3.main.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
+    <!-- custom js -->
+    <script type="text/javascript" src="/js/main.js"></script>            
+    <script type="text/javascript" src="/js/main-min.js"></script> 
 {{--     setTimeout(function() {
     ."alert".slideup
     } --}}
