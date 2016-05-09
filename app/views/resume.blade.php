@@ -7,9 +7,7 @@
 @section('content')
 
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+
 <head>
     <title>Resume | Gaston Lenotre</title>
 
@@ -60,7 +58,7 @@
                 </div>
                 <!--//item-->
                 <div class="item">
-                    <h4 class="degree">BA in Philosophys</h4>
+                    <h4 class="degree">BA in Philosophy</h4>
                     <h5 class="meta">University of St. Thomas</h5>
                     <div class="time">2002 - 2006</div>
                 </div><!--//item-->
@@ -147,14 +145,6 @@
                     </div><!--//item-->
                     
 {{--                     <div class="item">
-                        <h3 class="level-title">Ruby on Rails</h3>
-                        <div class="level-bar">
-                            <div class="level-bar-inner" data-level="85%">
-                            </div>                                      
-                        </div><!--//level-bar-->                                 
-                    </div><!--//item--> --}}
-                    
-{{--                     <div class="item">
                         <h3 class="level-title">Sketch &amp; Photoshop</h3>
                         <div class="level-bar">
                             <div class="level-bar-inner" data-level="60%">
@@ -216,8 +206,7 @@
  
     <footer class="footer">
         <div class="text-center">
-                <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
-                {{-- <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small> --}}
+                <small class="copyright">Designed by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
         </div><!--//container-->
     </footer><!--//footer-->
  

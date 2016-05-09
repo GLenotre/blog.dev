@@ -3,7 +3,7 @@
   <div class="container-fluid">
 	<!-- Brand and toggle get grouped for better mobile display -->
 
-      <img src="/img/Gaston_navy-blue_circle.png" class="img-responsive center-block" alt="Gaston Logo" width="150" height="150"> 
+      <a href="/"><img src="/img/Gaston_navy-blue_circle.png" class="img-responsive center-block" alt="Gaston Logo" width="150" height="150"></a>
 
     <!--  Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-1">

@@ -20,8 +20,8 @@
 
 Route::get('/login', 'UserController@showLogin');
 Route::post('/login', 'UserController@postLogin');
-
 Route::get('/logout', 'UserController@getLogout');
+Route::get('/', 'UserController@show');
 
 Route::get('/', 'HomeController@index');
 
@@ -35,14 +35,6 @@ Route::resource('posts', 'PostsController'); // CRUD
 
 Route::get('/whackamole', 'HomeController@showWhackamole');
 
-// Route::get('/sayhello/{name}',function($name)
-// {
-// 		if($name == 'George') {
-// 			return Redirect::to('/');
-// 		} else {
-// 			return "Hello, $name!";
-// 		}
-// });
 
 Route::get('/resume',function()
 {
