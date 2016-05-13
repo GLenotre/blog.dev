@@ -1,20 +1,19 @@
 @extends('layouts.master')
 
 @section('title')
-<h1>Main</h1>
+<h1>Blog</h1>
 @stop
 
     @section('content')
 
-    @foreach($posts as $post)
-        
-        <h2>{{{$post->title}}}</a></h2>
-        {{-- <a href="{{{ action('PostsController@show', $post->id)}}}"> --}}
-        {{$post->body}}
-        <p>Created on {{{$post->created_at->setTimezone('America/Chicago')->format('m/j/y')}}}</p>
-        <p>Written by {{{$post->user->first_name . " " . $post->user->last_name}}}</p>
-    @endforeach
-
-	{{ $posts->links() }}
+    <div class="well">
+        @foreach($posts as $post)
+            <h3>{{{$post->title}}}</a></h3>
+            {{-- <a href="{{{ action('PostsController@show', $post->id)}}}"> --}}
+            {{$post->body}}
+            <p>Created on {{{$post->created_at->setTimezone('America/Chicago')->format('m/j/y')}}}</p>
+            <p>Written by {{{$post->user->first_name . " " . $post->user->last_name}}}</p>
+        @endforeach
+    </div>
     
     @stop

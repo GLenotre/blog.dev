@@ -19,7 +19,7 @@ h1, h2 {
 }
 
 body {
-	background-image: url("/img/2.jpg");
+	background-image: url("/img/4.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
   padding: 30px;
@@ -27,4 +27,8 @@ body {
 
 .foliohover {
   cursor: zoom-in;
+}
+
+.login {
+  color: transparent;
 }
