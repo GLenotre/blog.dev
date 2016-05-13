@@ -99,7 +99,7 @@
             <section class="section projects-section">
                 <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
                 <div class="item">
-                    <span class="project-title"><a href="http://www.talkingtreefarm.com">Talking Tree Farm</a></span> - <span class="project-tagline">Built a full-stack development project for a local permaculture commercial farm in a team of three using Laravel with Blade, PHP, MySQL, JavaScript, jQuery, HTML and CSS. Interacts with Google Maps, Paypal, and Mailgun APIs. In production at TalkingTreeFarm.com. Code at <a href="https://github.com/GLenotre">github.com/GLenotre</a></span>
+                    <span class="project-title"><a href="http://www.talkingtreefarm.com">Talking Tree Farm</a></span> - <span class="project-tagline">Built a full-stack development project for a local permaculture commercial farm in a team of three using Laravel with Blade, PHP, MySQL, JavaScript, jQuery, HTML and CSS. Interacts with Google Maps, Stripe, and Mailgun APIs. In production at TalkingTreeFarm.com. Code at <a href="https://github.com/GLenotre">github.com/GLenotre</a></span>
                 </div><!--//item-->
                 <div class="item">
                     <span class="project-title"><a href="/">Personal Website</a></span> - <span class="project-tagline">Built a full-stack development project using Laravel with Blade, MySQL, PHP, JavaScript, HTML and CSS. Code at <a href="https://github.com/GLenotre">github.com/GLenotre</a></span>
