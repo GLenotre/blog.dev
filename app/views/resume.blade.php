@@ -30,11 +30,11 @@
             
             <div class="contact-container container-block">
                 <ul class="list-unstyled contact-list">
-                    <li class="email"><i class="fa fa-envelope"></i><a href="mailto: gastonlenotre@gmail.com">gastonlenotre@gmail</a></li>
+                    <li class="email"><i class="fa fa-envelope"></i><a href="mailto: gastonlenotre@gmail.com">gastonlenotre@gmail.com</a></li>
                     <li class="phone"><i class="fa fa-phone"></i><a href="tel:832 728 8724">832 728 8724</a></li>
-                    <li class="website"><i class="fa fa-globe"></i><a href="http://www.gastonlenotre.org">gastonlenotre.org</a></li>
+                    <li class="website"><i class="fa fa-globe"></i><a href="/">gastonlenotre.org</a></li>
                     <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/gaston-lenotre-555126a2" target="_blank">linkedin.com/in/gaston-lenotre</a></li>
-                    <li class="github"><i class="fa fa-github"></i><a href="https://github.com/GLenotre">github.com/GLenotre</a></li>
+                    <li class="github"><i class="fa fa-github"></i><a href="https://github.com/GLenotre" target="_blank">github.com/GLenotre</a></li>
                 </ul>
             </div><!--//contact-container-->
             <div class="education-container container-block">
@@ -99,10 +99,10 @@
             <section class="section projects-section">
                 <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
                 <div class="item">
-                    <span class="project-title"><a href="http://www.talkingtreefarm.com">Talking Tree Farm</a></span> - <span class="project-tagline">Built a full-stack development project for a local permaculture commercial farm in a team of three using Laravel with Blade, PHP, MySQL, JavaScript, jQuery, HTML and CSS. Interacts with Google Maps and Paypal APIs. In production at TalkingTreeFarm.com. Code at <a href="https://github.com/GLenotre">github.com/GLenotre</a></span>
+                    <span class="project-title"><a href="http://www.talkingtreefarm.com">Talking Tree Farm</a></span> - <span class="project-tagline">Built a full-stack development project for a local permaculture commercial farm in a team of three using Laravel with Blade, PHP, MySQL, JavaScript, jQuery, HTML and CSS. Interacts with Google Maps, Paypal, and Mailgun APIs. In production at TalkingTreeFarm.com. Code at <a href="https://github.com/GLenotre">github.com/GLenotre</a></span>
                 </div><!--//item-->
                 <div class="item">
-                    <span class="project-title"><a href="http://www.gastonlenotre.org">Personal Website</a></span> - <span class="project-tagline">Built a full-stack development project using Laravel with Blade, MySQL, PHP, JavaScript, HTML and CSS. Code at <a href="https://github.com/GLenotre">github.com/GLenotre</a></span>
+                    <span class="project-title"><a href="/">Personal Website</a></span> - <span class="project-tagline">Built a full-stack development project using Laravel with Blade, MySQL, PHP, JavaScript, HTML and CSS. Code at <a href="https://github.com/GLenotre">github.com/GLenotre</a></span>
                 </div><!--//item-->    
                 <div class="item">
                     <span class="project-title">GrapeOn</span> - 
@@ -128,13 +128,13 @@
                         </div><!--//level-bar-->                                 
                     </div><!--//item-->
                     
-{{--                     <div class="item">
+                    <div class="item">
                         <h3 class="level-title">Angular</h3>
                         <div class="level-bar">
-                            <div class="level-bar-inner" data-level="98%">
+                            <div class="level-bar-inner" data-level="20%">
                             </div>                                      
                         </div><!--//level-bar-->                                 
-                    </div><!--//item--> --}}
+                    </div><!--//item-->
                     
                     <div class="item">
                         <h3 class="level-title">HTML5 &amp; CSS</h3>
@@ -147,7 +147,7 @@
 {{--                     <div class="item">
                         <h3 class="level-title">Sketch &amp; Photoshop</h3>
                         <div class="level-bar">
-                            <div class="level-bar-inner" data-level="60%">
+                            <div class="level-bar-inner" data-level="40%">
                             </div>                                      
                         </div><!--//level-bar-->                                 
                     </div><!--//item--> --}}
