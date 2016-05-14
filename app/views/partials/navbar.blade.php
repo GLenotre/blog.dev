@@ -1,3 +1,6 @@
+	<link rel="stylesheet" type="text/css" href="css/partials.css">
+
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
   	<div class="col-sm-4"></div>
