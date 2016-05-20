@@ -85,7 +85,6 @@ class PostsController extends BaseController {
 	public function edit($id)
 	{
 		$post = $this->postNotFound($id);
-
 		
 		// dd($post);
 		return View::make('posts.edit')->with(['post' => $post]);

@@ -8,8 +8,7 @@
 
     <div class="well">
         @foreach($posts as $post)
-            <h3>{{{$post->title}}}</a></h3>
-            {{-- <a href="{{{ action('PostsController@show', $post->id)}}}"> --}}
+            <a href="{{{ action('PostsController@show', $post->id)}}}"><h3>{{{$post->title}}}</h3></a>
             {{$post->body}}
             <p>Created on {{{$post->created_at->setTimezone('America/Chicago')->format('m/j/y')}}}</p>
             <p>Written by {{{$post->user->first_name . " " . $post->user->last_name}}}</p>

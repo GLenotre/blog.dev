@@ -29,6 +29,7 @@ Route::get('/portfolio', 'HomeController@showPortfolio');
 Route::get('/resume', 'HomeController@showResume');
 
 Route::resource('/posts', 'PostsController'); // CRUD
+Route::resource('/posts/edit', 'PostsController');
 
 // Route::get('/whackamole', 'HomeController@showWhackamole');
 
