@@ -19,10 +19,10 @@ class HomeController extends BaseController {
 		return View::make('landing');	
 	}
 
-	public function showWhackamole()
-	{
-		return View::make('whackamole');
-	}
+	// public function showWhackamole()
+	// {
+	// 	return View::make('whackamole');
+	// }
 
 	public function showWelcome()
 	{

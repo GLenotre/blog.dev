@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 
 	{{-- favicon icon --}}
 		<link rel="apple-touch-icon" sizes="57x57" href="/img/Gaston_navy-blue_circle.png">

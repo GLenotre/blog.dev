@@ -6,17 +6,8 @@
 
 @section('top-script')
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+	{{-- <link rel="stylesheet" type="text/css" href="css/main.css"> --}}
 @stop
-
-@section('bottom-script')
-	<script src="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-
-	<script>
-		var simplemde = new SimpleMDE({
-			element: document.getElementById("body")
-		});
-	</script>
-@stop 
 
 @section('content')
 
@@ -49,3 +40,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 @stop
+
+@section('bottom-script')
+	<script src="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+	<script>
+		var simplemde = new SimpleMDE({
+			element: document.getElementById("body")
+		});
+	</script>
+@stop 

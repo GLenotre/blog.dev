@@ -24,45 +24,13 @@ Route::get('/logout', 'UserController@getLogout');
 Route::get('/', 'UserController@show');
 
 Route::get('/', 'HomeController@index');
-
 Route::get('/blog', 'PostsController@index');
-
 Route::get('/portfolio', 'HomeController@showPortfolio');
-
 Route::get('/resume', 'HomeController@showResume');
 
-Route::resource('posts', 'PostsController'); // CRUD
+Route::resource('/posts', 'PostsController'); // CRUD
 
-Route::get('/whackamole', 'HomeController@showWhackamole');
-
-
-Route::get('/resume',function()
-{
-		return View::make('resume');
-});
-
-Route::get('/portfolio',function()
-{
-		return View::make('portfolio');
-});
-
-// Route::get('/sayhello/{name?}', function($name = 'Codeup')
-// {
-//     $data = ['name' => $name];   // the key and value should be the same, echo the key $name
-//     return View::make('my-first-view')->with($data);
-// });
-
-// Route::get('my-posts', function() {
-// 	$user = User::first();
-
-// 	foreach($user->posts as $post) {
-// 		echo "Title is: $post->title" . "<br>";
-// 		echo "Body is: $post->body" . "<br>";
-// 		}
-// });
-
-// Route::get('/user/{id}', 'UserController@show');
-
+// Route::get('/whackamole', 'HomeController@showWhackamole');
 
 Route::get('/query', 'PostsController@search');
 
