@@ -42,14 +42,14 @@
                 <div class="item">
                     <h4 class="degree">Software Development</h4>
                     <h5 class="meta">Codeup Accelerator</h5>
-                    <div class="time">2016</div>
+                    <div class="time">2015 - 2016</div>
                 </div>
                 <!--//item-->
-                <div class="item">
+{{--                 <div class="item">
                     <h4 class="degree">PhD in Philosophy</h4>
                     <h5 class="meta">The Catholic University of America</h5>
                     <div class="time">2012 - 2016</div>
-                </div>
+                </div> --}}
                 <!--//item-->
                 <div class="item">
                     <h4 class="degree">MA in Philosophy</h4>
