@@ -92,7 +92,7 @@
             <section class="section summary-section">
                 <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
                 <div class="summary">
-                    <p>I taught philosophy at the university level for two years and then discovered code.</p>
+                    <p>I taught philosophy at the university level for two years, worked on the business side of a culinary arts college for two years, then I pursued coding full-time.</p>
                 </div><!--//summary-->
             </section><!--//section-->
             
